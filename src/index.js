@@ -72,7 +72,7 @@ const getNews = query => {
 // Returns promise with all images in array (Array)
 // ["link","link", ...]
 const getImages = query => {
-  const url = `https://www.google.com/search?tbm=isch&q=${query}`;
+  const url = `https://www.google.com/search?tbm=isch&q=${query}#q=${query}&tbm=isch&tbs=sur:fc&imgrc=_`;
   const imageList = [];
   return getPage(url)
     .then($ => $('#ires').find('a img'))
